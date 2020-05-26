@@ -1,19 +1,37 @@
+:root{
+   --mainColor: #01cbbd;
+   --secondColor: #6363ad;
+   --font: 'Roboto', sans-serif;
+   --backSite: #ecf0f1;
+}
 *{
    padding: 0;
    margin: 0;
    border: 0;
-   box-sizing: border-box;/*Estudiar*/
+   box-sizing: border-box;
 }
 body{
-   font-family: 'Roboto', sans-serif;
+   font-family: var(--font);
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: center;
+   align-items: center;
+   background: var(--backSite);
 }
-/*
-   Colores:
-   Morado:#6363ad
-   Menta:#01cbbd
-*/
+.row{
+   display: flex;
+   flex-flow: row wrap;
+   align-items: center;
+}
+.row p{
+   margin-left: 10px;
+}
+.cardContainer{
+   width: 400px;
+   background: white;
+}
 .profile{
-   background: #6363ad;
+   background: var(--secondColor);
    text-align: center;
    padding: 40px;
    color: white;
@@ -41,6 +59,7 @@ body{
 .photo img{
    width: 100%;
    border-radius: 100%;
+   object-fit: cover;
 }
 .name{
    font-weight: lighter;
@@ -52,20 +71,18 @@ body{
 }
 .center{
    position: relative;
-   margin-top: -55px;
+   margin-top: -34px;
    text-align: center;
 }
 .like{
-   font-size: 3em;
-   background: #01cbbd;
-   padding: 30px;
+   font-size: 2em;
+   background: var(--mainColor);
+   padding: 18px;
    border-radius: 100%;
    color: white;
-   /*position: absolute;
-   bottom: -50px;*/
 }
 .timeLine{
-   padding: 30px 0;
+   padding: 15px 0;
    position: relative;
 }
 .friends{
@@ -82,12 +99,13 @@ body{
 .friends div img{
    width: 100%;
    border-radius: 100%;
+   object-fit: cover;
 }
 .time{
    text-align: center;
    display: block;
    font-size: 2em;
-   color: #01cbbd;
+   color: var(--mainColor);
    margin: 30px 0;
 }
 .post{
