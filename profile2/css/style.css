@@ -1,0 +1,214 @@
+:root {
+  --mainColor: rgb(52, 152, 219);
+  --backColor: rgb(41, 128, 185);
+  --secondColor: rgb(35, 30, 57);
+  --thirdColor: rgb(31, 26, 54);
+  --backSite: rgb(52, 73, 94);
+  --textColor: rgb(179, 184, 205);
+  --transition: ease-in-out 0.2s;
+  --font: "Montserrat", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  outline: 0;
+}
+body {
+  background: var(--backSite);
+  font-family: var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+h3 {
+  margin: 10px 0;
+}
+h5 {
+  text-transform: uppercase;
+}
+p {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 20px 0;
+}
+.cardContainer {
+  background: var(--secondColor);
+  border-radius: 25px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+  color: var(--textColor);
+  padding: 30px 0 0;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  overflow: hidden;
+}
+.cardContainer .pro {
+  color: var(--secondColor);
+  background: #febb0b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.photo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.photoSubmit {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  max-height: 150px;
+  min-height: 150px;
+  max-width: 150px;
+  min-width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.file {
+  display: none;
+}
+.photoUser {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+.photoUser > img {
+  border: 1px solid var(--mainColor);
+  border-radius: 100%;
+  padding: 7px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.otherPhoto {
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: var(--transition);
+  padding: 7px;
+  border-radius: 100%;
+  transform: scale(0);
+  z-index: 1;
+}
+.otherPhoto img {
+  background: rgba(52, 73, 94, 0.5);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: scale-down;
+}
+.photo:hover .otherPhoto {
+  opacity: 1;
+  transform: scale(1);
+}
+.delete {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1em;
+  background: var(--mainColor);
+  border-radius: 50%;
+  z-index: 999999;
+  cursor: pointer;
+  padding: 2px;
+  color: white;
+}
+.buttons .primary {
+  background: var(--mainColor);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: white;
+  font-family: var(--font);
+  font-weight: 500;
+  padding: 10px 25px;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.buttons .primary.ghost {
+  border: 1px solid var(--mainColor);
+  background: transparent;
+  color: var(--mainColor);
+}
+.buttons .primary:hover {
+  background: var(--backColor);
+}
+.buttons .primary.ghost:hover {
+  color: white;
+}
+.items{
+  cursor: default;
+}
+.skills {
+  background-color: var(--thirdColor);
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+}
+.skills h6 {
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+.skills ul li {
+  border: 1px solid rgb(45, 39, 71);
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.skills ul li:hover {
+  opacity: 1;
+  border: 1px solid white;
+  color: white;
+}
+.hide {
+  visibility: hidden;
+}
+.view{
+  display: inline-block;
+}
+.hidden{
+  display: none;
+  cursor: none;
+}
+.state{
+  transform: translateY(0);
+  opacity: 0;
+}
+.move{
+  animation: alerta 0.4s ease-in-out running forwards;
+}
+
+@keyframes alerta{
+	from{
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);;
+    opacity: 1;
+  }
+}
