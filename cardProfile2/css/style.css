@@ -5,7 +5,7 @@
   --thirdColor: rgb(31, 26, 54);
   --backSite: rgb(52, 73, 94);
   --textColor: rgb(179, 184, 205);
-  --transition: ease-in-out 0.2s;
+  --transition: all 0.2s ease-in-out;
   --font: "Montserrat", sans-serif;
 }
 * {
@@ -102,11 +102,11 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  transition: var(--transition);
   padding: 7px;
   border-radius: 100%;
   transform: scale(0);
   z-index: 1;
+  transition: var(--transition);
 }
 .otherPhoto img {
   background: rgba(52, 73, 94, 0.5);
