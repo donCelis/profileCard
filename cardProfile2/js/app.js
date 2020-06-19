@@ -1,57 +1,16 @@
-let c = e => {
-  console.log(e)
-}
 let getS = document.querySelector.bind(document)
-//Capturando los hijos
-let li = getS('li')
-
-/* for (let i = 0; i < li.length; i++) {
-  li[i].addEventListener('click', ()=>{
-    console.log(li[i].textContent)
-  })
-} */
-
-console.log('-----')
-
-/* for (let i of li) {
-  i.addEventListener('click', ()=>{
-    console.log(i.textContent)
-  })
-} */
-
-console.log('-----')
-
-/* li.forEach(function(e){
-    e.addEventListener('click', ()=>{
-      console.log(e.textContent)
-    })
-}) */
-
-//capturando el padre
-let ul = getS('.items')
-
-/* ul.addEventListener('click',(e)=>{
-  let element = e.target
-  if (element.tagName === 'LI') {
-    console.log(element.textContent)
-  }
-}) */
-
 let follow = getS('.follow')
 
 follow.addEventListener('click', e => {
-  let ele = e.target
+  let ele = e.target,
+      sms = ''
   if (ele.textContent == `Follow`) {
-    ele.textContent = 'Following'
+    sms = 'Following'
   } else {
-    ele.textContent = 'Follow'
+    sms = 'Follow'
   }
+  ele.textContent = sms
 })
-
-//parentNode -> selecciona el elemento padre
-//nextElementSibling -> selecciona el elemento siguiente en el dom
-//firstElementChild -> selecciona el primer elemento hijo del dom
-//setAttribute -> cambia atributos en una etiqueta
 
 let inputFile = getS('.file')
 
