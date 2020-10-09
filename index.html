@@ -2,27 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sliders Js Vanilla</title>
+    <title>Profile Card</title>
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/yeti/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap"
     />
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="container">
-      <section class="row justify-content-center">
-        <a
-          href="https://doncelis.github.io/profileCards/cardProfile1/"
-          class="m-4 btn btn-primary"
-          >Profile Card Js V1</a
-        >
-        <a
-          href="https://doncelis.github.io/profileCards/cardProfile2/"
-          class="m-4 btn btn-primary"
-          >Profile Card Js V2</a
-        >
-      </section>
-    </main>
+    <div class="cardContainer">
+      <span class="pro">PRO</span>
+      <div class="photo">
+        <label class="photoSubmit">
+          <div class="otherPhoto">
+            <img src="img/photograph.png" alt="otherPhoto" />
+          </div>
+          <input type="file" class="file" accept="image/*" />
+          <div class="photoUser">
+            <img src="img/photoDefault.png" alt="photoUser" />
+          </div>
+          <i class="delete jam jam-close"></i>
+        </label>
+      </div>
+      <article class="info">
+        <h3>Alexander Celis</h3>
+        <h5>- SENA -</h5>
+        <p>
+          User interface designer and <br />
+          front-end developer.
+        </p>
+      </article>
+      <div class="buttons">
+        <button class="primary">Message</button>
+        <button class="primary ghost follow">Follow</button>
+      </div>
+      <div class="skills">
+        <h6>Skills</h6>
+        <ul class="items">
+          <li>Front End Development</li>
+          <li>UI / UX</li>
+          <li class="hide"></li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node</li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
